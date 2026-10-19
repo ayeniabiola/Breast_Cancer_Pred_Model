@@ -1,104 +1,34 @@
 # Breast_Cancer_Pred_Model
 # Breast Cancer Classification
 
+# Breast Cancer Classification Using Machine Learning
+
 ## Project Overview
 
-This project uses machine learning to classify breast cancer cases as **Malignant (M)** or **Benign (B)** based on measurements from breast cancer diagnostic data.
+This project explores the use of machine learning to classify breast tumors as **benign or malignant** using features derived from digitized images of breast mass samples.
 
-The project focuses on data preprocessing, model training, and model evaluation using Python and Scikit Learn.
+The goal is to build and evaluate a classification model using Python and machine learning techniques, while understanding how data preprocessing, model training, and evaluation contribute to a reliable predictive workflow.
 
-## Dataset
+## Problem Statement
 
-The dataset contains **569 observations** and **30 numerical features** related to characteristics of cell nuclei.
+Classifying tumors involves analyzing multiple measurements that may be difficult to assess together manually. This project investigates how supervised machine learning can learn patterns from labeled data and predict the class associated with a tumor sample.
 
-The target variable is:
+## Project Objectives
 
-* `diagnosis`
+- Explore and prepare the dataset for machine learning.
+- Clean unnecessary columns and handle relevant data quality issues.
+- Train a classification model using the selected features.
+- Evaluate model performance on unseen test data.
+- Understand the strengths and limitations of using machine learning for this classification task.
 
-  * `M` = Malignant
-  * `B` = Benign
+## Tools and Technologies
 
-The following columns were removed during preprocessing:
+- **Python** for programming
+- **Pandas and NumPy** for data manipulation
+- **Matplotlib and Seaborn** for data visualization, where used
+- **Scikit-learn** for preprocessing, model training, and evaluation
+- **Jupyter Notebook** for experimentation, if applicable
 
-* `id`
-* `Unnamed: 32`
+## Important Note
 
-```python
-X = can.drop(columns=['id', 'diagnosis', 'Unnamed: 32'])
-y = can['diagnosis']
-```
-
-## Machine Learning Models
-
-Two classification algorithms were used:
-
-1. **Logistic Regression**
-2. **Decision Tree Classifier**
-
-### Logistic Regression
-
-Logistic Regression was used as a classification model to predict whether a tumor is malignant or benign.
-
-### Decision Tree
-
-A Decision Tree Classifier was used to learn patterns in the dataset and classify observations into malignant or benign categories.
-
-## Data Preprocessing
-
-The dataset was divided into training and testing sets using `train_test_split`.
-
-Feature scaling was applied to the Logistic Regression model using `StandardScaler`.
-
-```python
-X_train, X_test, y_train, y_test = train_test_split(
-    X,
-    y,
-    test_size=0.2,
-    random_state=42,
-    stratify=y
-)
-```
-
-## Model Evaluation
-
-The models were evaluated using classification metrics such as:
-
-* Accuracy
-* Precision
-* Recall
-* F1 Score
-* Confusion Matrix
-
-These metrics were used to assess how well the models distinguish between malignant and benign cases.
-
-## Technologies Used
-
-* Python
-* Pandas
-* NumPy
-* Matplotlib
-* Scikit Learn
-* Jupyter Notebook
-
-## Key Learning
-
-This project helped me understand how classification models work in a practical machine learning problem, including:
-
-* Preparing real world data
-* Handling unnecessary columns
-* Splitting data into training and testing sets
-* Feature scaling
-* Training classification models
-* Evaluating model performance
-
-## Disclaimer
-
-This project is for **educational and machine learning practice purposes only**. The results should not be used as a substitute for professional medical diagnosis.
-
-## Author
-
-**Abiola Ayeni**
-
-Aspiring AI and Data Professional
-
-GitHub: [ayeniabiola](https://github.com/ayeniabiola)
+This project is an educational machine learning exercise. Its predictions are not medical diagnoses and must not be used as a substitute for assessment by qualified healthcare professionals.
